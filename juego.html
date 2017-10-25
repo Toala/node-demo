@@ -1,0 +1,272 @@
+<html>
+<head>
+	<title>Across 2015</title>
+	<meta name="viewport" content="width = 1024, height=768, initial-scale=1.0, maximum-scale=1.0" />
+	<meta charset="UTF-8">
+	<link href="/css/estilos2.css" rel="stylesheet">
+	<!----><link href="/css/paginas.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/animate.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+</head>
+<body>
+<div class="fondo-negro oculto"></div>
+
+<div id="notificacion" class="oculto">
+	<span class="txt-alerta"></span>
+</div>
+
+<div class="contiene-pregunta oculto">
+	<div class="icono-cerrar cierro-voto oculto"></div>
+	<div class="pregunta"></div>
+	<div class="respuestas">
+		
+	</div>
+	<p class="gracias oculto">Gracias por tu votación</p>
+	<div class="reloj">15</div>
+	<input type="hidden" id="reloj_cuenta" value="15">
+</div>
+
+	<div class="tanger-live oculto">
+		<div class="icono-cerrar cierro-live">X</div>
+
+		<div class="titulo-experto">Preguntale al experto</div>
+		
+		<div class="frm-login">
+			<textarea id="pregunta-ponente" cols="80" rows="10" placeholder="Escriba su pregunta ..."></textarea>
+			<div class="btn-envio-pregunta">Enviar</div>
+		</div>
+	</div>
+
+	<div class="mandando-pregunta oculto">
+		<span class="txt-enviando txt-textos">
+			Su pregunta se esta enviando! <br />Espere por favor ...
+			<div id="preloader6">
+	           <span></span>
+	           <span></span>
+	           <span></span>
+	           <span></span>
+	       </div>
+		</span>
+		
+		<span class="txt-confirmado txt-textos oculto">Su pregunta se envío con exito!<div class="cerrar-pregunta">CERRAR</div></span>
+	</div>
+
+	<div class="mandando-nota oculto">
+		<span class="txt-enviando-1 txt-textos">
+			Su encuesta se esta enviando!
+			<div id="preloader6">
+	           <span></span>
+	           <span></span>
+	           <span></span>
+	           <span></span>
+	       </div>
+		</span>
+		
+		<span class="txt-confirmado-1 txt-textos oculto">Su encuesta ha sido enviada con exito!</span>
+	</div>
+<!--<div id="encuesta">Encuesta</div>-->
+	<div id="contenedor">
+		<div class="cover animated fadeIn"></div>
+
+		<div class="paginas pag-inicio animated oculto">
+			<div class="border-menu sub-ponentes animated bounceIn"><div class="sub-menus" id="ponentes"></div></div>
+			<div class="border-menu sub-presentacion veo-pre animated bounceIn" id="1"><div class="sub-menus" id="presentaciones"></div></div>
+			<div class="border-menu sub-pregunta-experto animated bounceIn"><div class="sub-menus" id="experto"></div></div>
+
+			<div class="border-menu sub-encuesta animated bounceIn"><div class="sub-menus" id="encuesta"></div></div>
+
+			<div class="container-break">
+				<div class="row-break" id="4">break 1</div>
+				<div class="row-break" id="2">break 2</div>
+				<div class="row-break" id="3">break 3</div>
+			</div>
+		</div>
+
+		<div class="paginas interiores in-ponentes oculto">
+			<div class="shadow-speakers animated oculto">
+				<div class="info-speakers">
+					<div class="close-speakers">X</div>
+					<div class="panel-sp p1">
+						<img src="img/ponentes/ponente-1.jpg" class="speaker-img" />
+					</div>
+					<div class="panel-sp p2">
+						<div class="name-speaker"></div>
+						<div class="cv-speaker"></div>
+					</div>
+				</div>	
+			</div>
+
+			<div class="header-speakers">
+				<div class="border-menu-1 sub-ponentes animated fadeIn"><div class="sub-menus-1 active" id="ponentes-1"></div></div>
+				<div class="border-menu-1 sub-presentacion veo-pre animated fadeIn" id="1"><div class="sub-menus-1" id="presentaciones-1"></div></div>
+				<div class="border-menu-1 sub-pregunta-experto animated fadeIn"><div class="sub-menus-1" id="experto-1"></div></div>
+			</div>
+
+			<div class="titulo-ponentes">SPEAKERS</div>
+
+			<div class="speakers">
+				<div class="border-ponente" id="1">
+					<div class="ponente"><img src="img/ponentes/ponente-1.jpg" /></div>
+				</div>
+
+				<div class="border-ponente der-pon" id="2">
+					<div class="ponente"><img src="img/ponentes/ponente-2.jpg" /></div>
+				</div>
+			</div>
+
+
+			<div class="btn-regreso-menu btn-back-ponente">
+				<img src="img/home/home.png"/>   REGRESAR
+			</div>		
+		</div>
+
+		<div class="paginas in-encuesta oculto">
+			<div class="titulo-ponentes txt-encuesta">EVALUACIÓN</div>
+
+			<div class="container-encuesta">
+				<div class="step-1">
+					<div class="row-encuesta">1. En general ¿Cómo calificaría el evento?</div>
+					<div class="row-encuesta question-bottom">
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG1" class="css-checkbox" value="Malo" /><label for="checkboxG1" class="css-label">Malo</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG2" class="css-checkbox" value="Regular" /><label for="checkboxG2" class="css-label">Regular</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG3" class="css-checkbox" value="Suficiente" /><label for="checkboxG3" class="css-label">Suficiente</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG4" class="css-checkbox" value="Bueno" /><label for="checkboxG4" class="css-label">Bueno</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG5" class="css-checkbox" value="Muy Bueno" /><label for="checkboxG5" class="css-label">Muy bueno</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG1" id="checkboxG6" class="css-checkbox" value="Excelente" /><label for="checkboxG6" class="css-label">Excelente</label>
+						</div>
+					</div>
+
+					<div class="row-encuesta">2. ¿La información presentada y discutida le aporta algún valor a su práctica clínica diaria?</div>
+					<div class="row-encuesta question-bottom">
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG2" id="checkboxG7" class="css-checkbox" value="Sí, bastante" /><label for="checkboxG7" class="css-label">Sí, bastante</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG2" id="checkboxG8" class="css-checkbox" value="Sí, algo" /><label for="checkboxG8" class="css-label">Sí, algo</label>
+						</div>
+						<div class="col-respuestas col-res-2">
+							<input type="radio" name="checkboxG2" id="checkboxG9" class="css-checkbox" value="No, no del todo" /><label for="checkboxG9" class="css-label">No, no del todo</label>
+						</div>
+					</div>
+
+
+					<div class="row-encuesta">3. ¿Cómo evaluaría el nivel de discusión de la actividad?</div>
+					<div class="row-encuesta question-bottom">
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG3" id="checkboxG10" class="css-checkbox" value="Muy bajo" /><label for="checkboxG10" class="css-label">Muy bajo</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG3" id="checkboxG11" class="css-checkbox" value="Apropiado" /><label for="checkboxG11" class="css-label">Apropiado</label>
+						</div>
+						<div class="col-respuestas col-res-2">
+							<input type="radio" name="checkboxG3" id="checkboxG12" class="css-checkbox" value="Muy elevado" /><label for="checkboxG12" class="css-label">Muy elevado</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG3" id="checkboxG12" class="css-checkbox" value="No aplica" /><label for="checkboxG12" class="css-label">No aplica</label>
+						</div>
+					</div>
+
+					<div class="row-encuesta">4. ¿Existe algún tema que no haya sido abarcado en el evento y que le hubiera gustado que se incluyera?</div>
+					<div class="row-encuesta question-bottom">
+						<textarea class="txt-area-encuesta checkboxG4"></textarea>
+					</div>
+				</div>	
+
+
+				<div class="step-2 oculto">
+					<div class="row-encuesta">5. En general ¿Cómo evaluaría la organización científica del evento?</div>
+					<div class="row-encuesta question-bottom">
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG13" class="css-checkbox" value="Malo" /><label for="checkboxG13" class="css-label">Malo</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG14" class="css-checkbox" value="Regular" /><label for="checkboxG14" class="css-label">Regular</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG15" class="css-checkbox" value="Suficiente" /><label for="checkboxG15" class="css-label">Suficiente</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG16" class="css-checkbox" value="Bueno" /><label for="checkboxG16" class="css-label">Bueno</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG17" class="css-checkbox" value="Muy Bueno" /><label for="checkboxG17" class="css-label">Muy bueno</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG5" id="checkboxG18º" class="css-checkbox" value="Excelente" /><label for="checkboxG18º" class="css-label">Excelente</label>
+						</div>
+					</div>
+
+					<div class="row-encuesta">6. ¿Estaría interesado en acudir a un evento similar en el futuro?</div>
+					<div class="row-encuesta question-bottom">
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG6" id="checkboxG18" class="css-checkbox" value="SI" /><label for="checkboxG18" class="css-label">SI</label>
+						</div>
+						<div class="col-respuestas">
+							<input type="radio" name="checkboxG6" id="checkboxG19" class="css-checkbox" value="NO" /><label for="checkboxG19" class="css-label">NO</label>
+						</div>
+					</div>
+
+
+					<div class="row-encuesta">7. Por favor utilice el espacio en la parte inferior para añadir cualquier comentario que pueda tener:</div>
+					<div class="row-encuesta question-bottom">
+						<textarea class="txt-area-encuesta checkboxG7"></textarea>
+					</div>
+				</div><!-- Fin step-2 -->	
+			</div>
+			
+			<div class="btn-regreso-menu btn-back-home"></div>
+			<div class="next-encuesta"></div>
+			<div class="prev-encuesta oculto"></div>
+			<div class="save-encuesta oculto"></div>
+
+		</div>
+
+		<div class="paginas contiene-presentacion oculto">
+			<div class="btn-regreso-menu btn-back-slides"></div>
+
+			<input type="hidden" id="visible-pre">
+			<input type="hidden" id="pag-pre-1" value="1"><input type="hidden" id="total-pre-1" value="13">
+			
+			<div class="pase-pagina contiene-pre-1 todas-pres">
+				<div class="pre-paginas-1 pag-1-1  pag-1 "></div>
+				<div class="pre-paginas-1 pag-1-2  pag-2 "></div>
+				<div class="pre-paginas-1 pag-1-3  pag-3 "></div>
+				<div class="pre-paginas-1 pag-1-4  pag-4 "></div>
+				<div class="pre-paginas-1 pag-1-5  pag-5 "></div>
+				<div class="pre-paginas-1 pag-1-6  pag-6 "></div>
+				<div class="pre-paginas-1 pag-1-7  pag-7 "></div>
+				<div class="pre-paginas-1 pag-1-8  pag-8 "></div>
+				<div class="pre-paginas-1 pag-1-9  pag-9 "></div>
+				<div class="pre-paginas-1 pag-1-10  pag-10 "></div>
+				<div class="pre-paginas-1 pag-1-11  pag-11 "></div>
+				<div class="pre-paginas-1 pag-1-12  pag-12 "></div>
+				<div class="pre-paginas-1 pag-1-13  pag-13 "></div>			
+			</div>
+		</div>
+
+	</div>
+
+	<input type="hidden" id="position" value="2" />
+	<input type="hidden" id="usuario">
+	
+	<script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/jquerytouch.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/gral.js"></script>
+</body>
+</html>

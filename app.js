@@ -333,7 +333,7 @@ io.sockets.on('connection', function(socket){
 		
 	});
 	socket.on("pregunta live",function(data,callback){
-		//console.log("mando una pregunta");
+		console.log(data);
 		var sql="insert into tanger_live(idusuarios,comentario) values(?,?)";
 		var info=new Array("1",data.pregunta);
 		var respuesta=new Array();
